@@ -1,35 +1,36 @@
 ### YamlMime:ManagedReference
 items:
-- uid: TraceTK.Diagnostics.FrameTracer
-  commentId: T:TraceTK.Diagnostics.FrameTracer
-  id: FrameTracer
-  parent: TraceTK.Diagnostics
+- uid: TraceTK.OpenGL.GlDebugLogger
+  commentId: T:TraceTK.OpenGL.GlDebugLogger
+  id: GlDebugLogger
+  parent: TraceTK.OpenGL
   children:
-  - TraceTK.Diagnostics.FrameTracer.BeginFrame
-  - TraceTK.Diagnostics.FrameTracer.EndFrame
+  - TraceTK.OpenGL.GlDebugLogger.#ctor(System.String)
+  - TraceTK.OpenGL.GlDebugLogger.Log(TraceTK.OpenGL.GlDebugMessage)
+  - TraceTK.OpenGL.GlDebugLogger.Start
   langs:
   - csharp
   - vb
-  name: FrameTracer
-  nameWithType: FrameTracer
-  fullName: TraceTK.Diagnostics.FrameTracer
+  name: GlDebugLogger
+  nameWithType: GlDebugLogger
+  fullName: TraceTK.OpenGL.GlDebugLogger
   type: Class
   source:
     remote:
-      path: src/TraceTK/Tracing/FrameTracer.cs
+      path: src/TraceTK/OpenGL/GlDebugLogger.cs
       branch: feat/opengl-debug-logging
       repo: https://github.com/RicoLViviers/TraceTK.git
-    id: FrameTracer
-    path: src/TraceTK/Tracing/FrameTracer.cs
-    startLine: 7
+    id: GlDebugLogger
+    path: src/TraceTK/OpenGL/GlDebugLogger.cs
+    startLine: 8
   assemblies:
   - TraceTK
-  namespace: TraceTK.Diagnostics
-  summary: Measures CPU execution time for individual frames.
+  namespace: TraceTK.OpenGL
+  summary: Captures OpenGL debug messages and writes them to the console and a log file.
   example: []
   syntax:
-    content: public class FrameTracer
-    content.vb: Public Class FrameTracer
+    content: public class GlDebugLogger
+    content.vb: Public Class GlDebugLogger
   inheritance:
   - System.Object
   inheritedMembers:
@@ -40,83 +41,120 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: TraceTK.Diagnostics.FrameTracer.BeginFrame
-  commentId: M:TraceTK.Diagnostics.FrameTracer.BeginFrame
-  id: BeginFrame
-  parent: TraceTK.Diagnostics.FrameTracer
+- uid: TraceTK.OpenGL.GlDebugLogger.#ctor(System.String)
+  commentId: M:TraceTK.OpenGL.GlDebugLogger.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: TraceTK.OpenGL.GlDebugLogger
   langs:
   - csharp
   - vb
-  name: BeginFrame()
-  nameWithType: FrameTracer.BeginFrame()
-  fullName: TraceTK.Diagnostics.FrameTracer.BeginFrame()
-  type: Method
+  name: GlDebugLogger(string)
+  nameWithType: GlDebugLogger.GlDebugLogger(string)
+  fullName: TraceTK.OpenGL.GlDebugLogger.GlDebugLogger(string)
+  type: Constructor
   source:
     remote:
-      path: src/TraceTK/Tracing/FrameTracer.cs
+      path: src/TraceTK/OpenGL/GlDebugLogger.cs
       branch: feat/opengl-debug-logging
       repo: https://github.com/RicoLViviers/TraceTK.git
-    id: BeginFrame
-    path: src/TraceTK/Tracing/FrameTracer.cs
-    startLine: 15
+    id: .ctor
+    path: src/TraceTK/OpenGL/GlDebugLogger.cs
+    startLine: 18
   assemblies:
   - TraceTK
-  namespace: TraceTK.Diagnostics
-  summary: Begins tracing a new frame.
+  namespace: TraceTK.OpenGL
+  summary: Creates an OpenGL debug logger.
   example: []
   syntax:
-    content: public void BeginFrame()
-    content.vb: Public Sub BeginFrame()
-  overload: TraceTK.Diagnostics.FrameTracer.BeginFrame*
-- uid: TraceTK.Diagnostics.FrameTracer.EndFrame
-  commentId: M:TraceTK.Diagnostics.FrameTracer.EndFrame
-  id: EndFrame
-  parent: TraceTK.Diagnostics.FrameTracer
+    content: public GlDebugLogger(string logPath = "logs/tracetk.log")
+    parameters:
+    - id: logPath
+      type: System.String
+      description: The path of the file where debug messages are written.
+    content.vb: Public Sub New(logPath As String = "logs/tracetk.log")
+  overload: TraceTK.OpenGL.GlDebugLogger.#ctor*
+  nameWithType.vb: GlDebugLogger.New(String)
+  fullName.vb: TraceTK.OpenGL.GlDebugLogger.New(String)
+  name.vb: New(String)
+- uid: TraceTK.OpenGL.GlDebugLogger.Start
+  commentId: M:TraceTK.OpenGL.GlDebugLogger.Start
+  id: Start
+  parent: TraceTK.OpenGL.GlDebugLogger
   langs:
   - csharp
   - vb
-  name: EndFrame()
-  nameWithType: FrameTracer.EndFrame()
-  fullName: TraceTK.Diagnostics.FrameTracer.EndFrame()
+  name: Start()
+  nameWithType: GlDebugLogger.Start()
+  fullName: TraceTK.OpenGL.GlDebugLogger.Start()
   type: Method
   source:
     remote:
-      path: src/TraceTK/Tracing/FrameTracer.cs
+      path: src/TraceTK/OpenGL/GlDebugLogger.cs
       branch: feat/opengl-debug-logging
       repo: https://github.com/RicoLViviers/TraceTK.git
-    id: EndFrame
-    path: src/TraceTK/Tracing/FrameTracer.cs
-    startLine: 25
+    id: Start
+    path: src/TraceTK/OpenGL/GlDebugLogger.cs
+    startLine: 38
   assemblies:
   - TraceTK
-  namespace: TraceTK.Diagnostics
-  summary: Ends tracing the current frame and returns the collected frame information.
+  namespace: TraceTK.OpenGL
+  summary: Enables OpenGL debug output and registers the debug message callback.
+  remarks: A valid OpenGL context must be current before this method is called.
   example: []
   syntax:
-    content: public FrameTrace EndFrame()
-    return:
-      type: TraceTK.Diagnostics.FrameTrace
-      description: A <xref href="TraceTK.Diagnostics.FrameTrace" data-throw-if-not-resolved="false"></xref> containing the frame number and elapsed CPU time.
-    content.vb: Public Function EndFrame() As FrameTrace
-  overload: TraceTK.Diagnostics.FrameTracer.EndFrame*
+    content: public void Start()
+    content.vb: Public Sub Start()
+  overload: TraceTK.OpenGL.GlDebugLogger.Start*
+- uid: TraceTK.OpenGL.GlDebugLogger.Log(TraceTK.OpenGL.GlDebugMessage)
+  commentId: M:TraceTK.OpenGL.GlDebugLogger.Log(TraceTK.OpenGL.GlDebugMessage)
+  id: Log(TraceTK.OpenGL.GlDebugMessage)
+  parent: TraceTK.OpenGL.GlDebugLogger
+  langs:
+  - csharp
+  - vb
+  name: Log(GlDebugMessage)
+  nameWithType: GlDebugLogger.Log(GlDebugMessage)
+  fullName: TraceTK.OpenGL.GlDebugLogger.Log(TraceTK.OpenGL.GlDebugMessage)
+  type: Method
+  source:
+    remote:
+      path: src/TraceTK/OpenGL/GlDebugLogger.cs
+      branch: feat/opengl-debug-logging
+      repo: https://github.com/RicoLViviers/TraceTK.git
+    id: Log
+    path: src/TraceTK/OpenGL/GlDebugLogger.cs
+    startLine: 76
+  assemblies:
+  - TraceTK
+  namespace: TraceTK.OpenGL
+  summary: Writes an OpenGL debug message to the console and log file.
+  example: []
+  syntax:
+    content: public void Log(GlDebugMessage message)
+    parameters:
+    - id: message
+      type: TraceTK.OpenGL.GlDebugMessage
+      description: The debug message to write.
+    content.vb: Public Sub Log(message As GlDebugMessage)
+  overload: TraceTK.OpenGL.GlDebugLogger.Log*
 references:
-- uid: TraceTK.Diagnostics
-  commentId: N:TraceTK.Diagnostics
-  name: TraceTK.Diagnostics
-  nameWithType: TraceTK.Diagnostics
-  fullName: TraceTK.Diagnostics
+- uid: TraceTK.OpenGL
+  commentId: N:TraceTK.OpenGL
+  name: TraceTK.OpenGL
+  nameWithType: TraceTK.OpenGL
+  fullName: TraceTK.OpenGL
   spec.csharp:
   - uid: TraceTK
     name: TraceTK
   - name: .
-  - uid: TraceTK.Diagnostics
-    name: Diagnostics
+  - uid: TraceTK.OpenGL
+    name: OpenGL
   spec.vb:
   - uid: TraceTK
     name: TraceTK
   - name: .
-  - uid: TraceTK.Diagnostics
-    name: Diagnostics
+  - uid: TraceTK.OpenGL
+    name: OpenGL
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -354,22 +392,42 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: TraceTK.Diagnostics.FrameTracer.BeginFrame*
-  commentId: Overload:TraceTK.Diagnostics.FrameTracer.BeginFrame
-  href: TraceTK.Diagnostics.FrameTracer.html#TraceTK_Diagnostics_FrameTracer_BeginFrame
-  name: BeginFrame
-  nameWithType: FrameTracer.BeginFrame
-  fullName: TraceTK.Diagnostics.FrameTracer.BeginFrame
-- uid: TraceTK.Diagnostics.FrameTrace
-  commentId: T:TraceTK.Diagnostics.FrameTrace
-  parent: TraceTK.Diagnostics
-  href: TraceTK.Diagnostics.FrameTrace.html
-  name: FrameTrace
-  nameWithType: FrameTrace
-  fullName: TraceTK.Diagnostics.FrameTrace
-- uid: TraceTK.Diagnostics.FrameTracer.EndFrame*
-  commentId: Overload:TraceTK.Diagnostics.FrameTracer.EndFrame
-  href: TraceTK.Diagnostics.FrameTracer.html#TraceTK_Diagnostics_FrameTracer_EndFrame
-  name: EndFrame
-  nameWithType: FrameTracer.EndFrame
-  fullName: TraceTK.Diagnostics.FrameTracer.EndFrame
+- uid: TraceTK.OpenGL.GlDebugLogger.#ctor*
+  commentId: Overload:TraceTK.OpenGL.GlDebugLogger.#ctor
+  href: TraceTK.OpenGL.GlDebugLogger.html#TraceTK_OpenGL_GlDebugLogger__ctor_System_String_
+  name: GlDebugLogger
+  nameWithType: GlDebugLogger.GlDebugLogger
+  fullName: TraceTK.OpenGL.GlDebugLogger.GlDebugLogger
+  nameWithType.vb: GlDebugLogger.New
+  fullName.vb: TraceTK.OpenGL.GlDebugLogger.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TraceTK.OpenGL.GlDebugLogger.Start*
+  commentId: Overload:TraceTK.OpenGL.GlDebugLogger.Start
+  href: TraceTK.OpenGL.GlDebugLogger.html#TraceTK_OpenGL_GlDebugLogger_Start
+  name: Start
+  nameWithType: GlDebugLogger.Start
+  fullName: TraceTK.OpenGL.GlDebugLogger.Start
+- uid: TraceTK.OpenGL.GlDebugLogger.Log*
+  commentId: Overload:TraceTK.OpenGL.GlDebugLogger.Log
+  href: TraceTK.OpenGL.GlDebugLogger.html#TraceTK_OpenGL_GlDebugLogger_Log_TraceTK_OpenGL_GlDebugMessage_
+  name: Log
+  nameWithType: GlDebugLogger.Log
+  fullName: TraceTK.OpenGL.GlDebugLogger.Log
+- uid: TraceTK.OpenGL.GlDebugMessage
+  commentId: T:TraceTK.OpenGL.GlDebugMessage
+  parent: TraceTK.OpenGL
+  href: TraceTK.OpenGL.GlDebugMessage.html
+  name: GlDebugMessage
+  nameWithType: GlDebugMessage
+  fullName: TraceTK.OpenGL.GlDebugMessage
