@@ -4,6 +4,7 @@ items:
   commentId: N:TraceTK.Diagnostics
   id: TraceTK.Diagnostics
   children:
+  - TraceTK.Diagnostics.FrameStatistics
   - TraceTK.Diagnostics.FrameTrace
   - TraceTK.Diagnostics.FrameTracer
   langs:
@@ -16,6 +17,12 @@ items:
   assemblies:
   - TraceTK
 references:
+- uid: TraceTK.Diagnostics.FrameStatistics
+  commentId: T:TraceTK.Diagnostics.FrameStatistics
+  href: TraceTK.Diagnostics.FrameStatistics.html
+  name: FrameStatistics
+  nameWithType: FrameStatistics
+  fullName: TraceTK.Diagnostics.FrameStatistics
 - uid: TraceTK.Diagnostics.FrameTrace
   commentId: T:TraceTK.Diagnostics.FrameTrace
   parent: TraceTK.Diagnostics

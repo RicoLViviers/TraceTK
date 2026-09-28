@@ -4,6 +4,9 @@ items:
   name: TraceTK.Diagnostics
   type: Namespace
   items:
+  - uid: TraceTK.Diagnostics.FrameStatistics
+    name: FrameStatistics
+    type: Class
   - uid: TraceTK.Diagnostics.FrameTrace
     name: FrameTrace
     type: Class

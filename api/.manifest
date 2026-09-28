@@ -1,5 +1,10 @@
 {
   "TraceTK.Diagnostics": "TraceTK.Diagnostics.yml",
+  "TraceTK.Diagnostics.FrameStatistics": "TraceTK.Diagnostics.FrameStatistics.yml",
+  "TraceTK.Diagnostics.FrameStatistics.#ctor(System.Int32)": "TraceTK.Diagnostics.FrameStatistics.yml",
+  "TraceTK.Diagnostics.FrameStatistics.AddFrame(TraceTK.Diagnostics.FrameTrace)": "TraceTK.Diagnostics.FrameStatistics.yml",
+  "TraceTK.Diagnostics.FrameStatistics.AverageFrameTime": "TraceTK.Diagnostics.FrameStatistics.yml",
+  "TraceTK.Diagnostics.FrameStatistics.FramesPerSecond": "TraceTK.Diagnostics.FrameStatistics.yml",
   "TraceTK.Diagnostics.FrameTrace": "TraceTK.Diagnostics.FrameTrace.yml",
   "TraceTK.Diagnostics.FrameTrace.Elapsed": "TraceTK.Diagnostics.FrameTrace.yml",
   "TraceTK.Diagnostics.FrameTrace.FrameNumber": "TraceTK.Diagnostics.FrameTrace.yml",
