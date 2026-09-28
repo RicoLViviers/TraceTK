@@ -1,0 +1,375 @@
+### YamlMime:ManagedReference
+items:
+- uid: TraceTK.Diagnostics.FrameTracer
+  commentId: T:TraceTK.Diagnostics.FrameTracer
+  id: FrameTracer
+  parent: TraceTK.Diagnostics
+  children:
+  - TraceTK.Diagnostics.FrameTracer.BeginFrame
+  - TraceTK.Diagnostics.FrameTracer.EndFrame
+  langs:
+  - csharp
+  - vb
+  name: FrameTracer
+  nameWithType: FrameTracer
+  fullName: TraceTK.Diagnostics.FrameTracer
+  type: Class
+  source:
+    remote:
+      path: src/TraceTK/Diagnostics/FrameTracer.cs
+      branch: main
+      repo: https://github.com/RicoLViviers/TraceTK.git
+    id: FrameTracer
+    path: src/TraceTK/Diagnostics/FrameTracer.cs
+    startLine: 7
+  assemblies:
+  - TraceTK
+  namespace: TraceTK.Diagnostics
+  summary: Measures CPU execution time for individual frames.
+  example: []
+  syntax:
+    content: public class FrameTracer
+    content.vb: Public Class FrameTracer
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TraceTK.Diagnostics.FrameTracer.BeginFrame
+  commentId: M:TraceTK.Diagnostics.FrameTracer.BeginFrame
+  id: BeginFrame
+  parent: TraceTK.Diagnostics.FrameTracer
+  langs:
+  - csharp
+  - vb
+  name: BeginFrame()
+  nameWithType: FrameTracer.BeginFrame()
+  fullName: TraceTK.Diagnostics.FrameTracer.BeginFrame()
+  type: Method
+  source:
+    remote:
+      path: src/TraceTK/Diagnostics/FrameTracer.cs
+      branch: main
+      repo: https://github.com/RicoLViviers/TraceTK.git
+    id: BeginFrame
+    path: src/TraceTK/Diagnostics/FrameTracer.cs
+    startLine: 15
+  assemblies:
+  - TraceTK
+  namespace: TraceTK.Diagnostics
+  summary: Begins tracing a new frame.
+  example: []
+  syntax:
+    content: public void BeginFrame()
+    content.vb: Public Sub BeginFrame()
+  overload: TraceTK.Diagnostics.FrameTracer.BeginFrame*
+- uid: TraceTK.Diagnostics.FrameTracer.EndFrame
+  commentId: M:TraceTK.Diagnostics.FrameTracer.EndFrame
+  id: EndFrame
+  parent: TraceTK.Diagnostics.FrameTracer
+  langs:
+  - csharp
+  - vb
+  name: EndFrame()
+  nameWithType: FrameTracer.EndFrame()
+  fullName: TraceTK.Diagnostics.FrameTracer.EndFrame()
+  type: Method
+  source:
+    remote:
+      path: src/TraceTK/Diagnostics/FrameTracer.cs
+      branch: main
+      repo: https://github.com/RicoLViviers/TraceTK.git
+    id: EndFrame
+    path: src/TraceTK/Diagnostics/FrameTracer.cs
+    startLine: 25
+  assemblies:
+  - TraceTK
+  namespace: TraceTK.Diagnostics
+  summary: Ends tracing the current frame and returns the collected frame information.
+  example: []
+  syntax:
+    content: public FrameTrace EndFrame()
+    return:
+      type: TraceTK.Diagnostics.FrameTrace
+      description: A <xref href="TraceTK.Diagnostics.FrameTrace" data-throw-if-not-resolved="false"></xref> containing the frame number and elapsed CPU time.
+    content.vb: Public Function EndFrame() As FrameTrace
+  overload: TraceTK.Diagnostics.FrameTracer.EndFrame*
+references:
+- uid: TraceTK.Diagnostics
+  commentId: N:TraceTK.Diagnostics
+  name: TraceTK.Diagnostics
+  nameWithType: TraceTK.Diagnostics
+  fullName: TraceTK.Diagnostics
+  spec.csharp:
+  - uid: TraceTK
+    name: TraceTK
+  - name: .
+  - uid: TraceTK.Diagnostics
+    name: Diagnostics
+  spec.vb:
+  - uid: TraceTK
+    name: TraceTK
+  - name: .
+  - uid: TraceTK.Diagnostics
+    name: Diagnostics
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TraceTK.Diagnostics.FrameTracer.BeginFrame*
+  commentId: Overload:TraceTK.Diagnostics.FrameTracer.BeginFrame
+  href: TraceTK.Diagnostics.FrameTracer.html#TraceTK_Diagnostics_FrameTracer_BeginFrame
+  name: BeginFrame
+  nameWithType: FrameTracer.BeginFrame
+  fullName: TraceTK.Diagnostics.FrameTracer.BeginFrame
+- uid: TraceTK.Diagnostics.FrameTrace
+  commentId: T:TraceTK.Diagnostics.FrameTrace
+  parent: TraceTK.Diagnostics
+  href: TraceTK.Diagnostics.FrameTrace.html
+  name: FrameTrace
+  nameWithType: FrameTrace
+  fullName: TraceTK.Diagnostics.FrameTrace
+- uid: TraceTK.Diagnostics.FrameTracer.EndFrame*
+  commentId: Overload:TraceTK.Diagnostics.FrameTracer.EndFrame
+  href: TraceTK.Diagnostics.FrameTracer.html#TraceTK_Diagnostics_FrameTracer_EndFrame
+  name: EndFrame
+  nameWithType: FrameTracer.EndFrame
+  fullName: TraceTK.Diagnostics.FrameTracer.EndFrame

@@ -1,0 +1,13 @@
+### YamlMime:TableOfContent
+items:
+- uid: TraceTK.Diagnostics
+  name: TraceTK.Diagnostics
+  type: Namespace
+  items:
+  - uid: TraceTK.Diagnostics.FrameTrace
+    name: FrameTrace
+    type: Class
+  - uid: TraceTK.Diagnostics.FrameTracer
+    name: FrameTracer
+    type: Class
+memberLayout: SamePage

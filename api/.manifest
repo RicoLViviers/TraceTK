@@ -1,0 +1,9 @@
+{
+  "TraceTK.Diagnostics": "TraceTK.Diagnostics.yml",
+  "TraceTK.Diagnostics.FrameTrace": "TraceTK.Diagnostics.FrameTrace.yml",
+  "TraceTK.Diagnostics.FrameTrace.Elapsed": "TraceTK.Diagnostics.FrameTrace.yml",
+  "TraceTK.Diagnostics.FrameTrace.FrameNumber": "TraceTK.Diagnostics.FrameTrace.yml",
+  "TraceTK.Diagnostics.FrameTracer": "TraceTK.Diagnostics.FrameTracer.yml",
+  "TraceTK.Diagnostics.FrameTracer.BeginFrame": "TraceTK.Diagnostics.FrameTracer.yml",
+  "TraceTK.Diagnostics.FrameTracer.EndFrame": "TraceTK.Diagnostics.FrameTracer.yml"
+}

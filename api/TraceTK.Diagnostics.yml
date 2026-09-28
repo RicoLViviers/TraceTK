@@ -1,0 +1,48 @@
+### YamlMime:ManagedReference
+items:
+- uid: TraceTK.Diagnostics
+  commentId: N:TraceTK.Diagnostics
+  id: TraceTK.Diagnostics
+  children:
+  - TraceTK.Diagnostics.FrameTrace
+  - TraceTK.Diagnostics.FrameTracer
+  langs:
+  - csharp
+  - vb
+  name: TraceTK.Diagnostics
+  nameWithType: TraceTK.Diagnostics
+  fullName: TraceTK.Diagnostics
+  type: Namespace
+  assemblies:
+  - TraceTK
+references:
+- uid: TraceTK.Diagnostics.FrameTrace
+  commentId: T:TraceTK.Diagnostics.FrameTrace
+  parent: TraceTK.Diagnostics
+  href: TraceTK.Diagnostics.FrameTrace.html
+  name: FrameTrace
+  nameWithType: FrameTrace
+  fullName: TraceTK.Diagnostics.FrameTrace
+- uid: TraceTK.Diagnostics.FrameTracer
+  commentId: T:TraceTK.Diagnostics.FrameTracer
+  href: TraceTK.Diagnostics.FrameTracer.html
+  name: FrameTracer
+  nameWithType: FrameTracer
+  fullName: TraceTK.Diagnostics.FrameTracer
+- uid: TraceTK.Diagnostics
+  commentId: N:TraceTK.Diagnostics
+  name: TraceTK.Diagnostics
+  nameWithType: TraceTK.Diagnostics
+  fullName: TraceTK.Diagnostics
+  spec.csharp:
+  - uid: TraceTK
+    name: TraceTK
+  - name: .
+  - uid: TraceTK.Diagnostics
+    name: Diagnostics
+  spec.vb:
+  - uid: TraceTK
+    name: TraceTK
+  - name: .
+  - uid: TraceTK.Diagnostics
+    name: Diagnostics
