@@ -3,6 +3,7 @@
     <File Path=".editorconfig" />
     <File Path=".gitattributes" />
     <File Path="Directory.Build.Props" />
+    <File Path="docfx.json" />
   </Folder>
   <Folder Name="/src/">
     <Project Path="src/TraceTK/TraceTK.csproj" />
