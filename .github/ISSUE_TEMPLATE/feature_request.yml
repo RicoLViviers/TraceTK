@@ -1,0 +1,57 @@
+name: Feature request
+description: Suggest a new feature or improvement for TraceTK
+title: "[Feature]: "
+labels:
+  - enhancement
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement to TraceTK.
+
+        Please describe the problem you want to solve and the behavior you would like to see.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem or limitation would this feature address?
+      placeholder: Describe the problem rather than only the proposed implementation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: Describe how you think TraceTK could address the problem.
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Example usage
+      description: If applicable, show what the API or usage could look like.
+      render: csharp
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Are there other approaches or workarounds you have considered?
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add any other information that may help explain the request.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for the same or a similar request.
+          required: true

@@ -1,0 +1,51 @@
+name: Documentation issue
+description: Report missing, incorrect, or unclear TraceTK documentation
+title: "[Docs]: "
+labels:
+  - documentation
+
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Documentation type
+      options:
+        - API reference
+        - Getting started
+        - Guide or tutorial
+        - README
+        - Code example
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is missing, incorrect, or unclear?
+    validations:
+      required: true
+
+  - type: input
+    id: page
+    attributes:
+      label: Page or API
+      description: Which documentation page, type, or member is affected?
+      placeholder: "e.g. TraceTK.Diagnostics.FrameTracer"
+
+  - type: textarea
+    id: improvement
+    attributes:
+      label: Suggested improvement
+      description: What would make the documentation clearer or more useful?
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked the current documentation for an existing answer.
+          required: true
+        - label: I searched existing issues for the same problem.
+          required: true

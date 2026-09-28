@@ -1,0 +1,109 @@
+name: Bug report
+description: Report a reproducible problem with TraceTK
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug in TraceTK.
+
+        Please provide enough information for the issue to be reproduced.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Clearly describe the problem you encountered.
+      placeholder: Describe what went wrong.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Provide the smallest set of steps or code needed to reproduce the issue.
+      placeholder: |
+        1. Create a FrameTracer
+        2. Call ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect TraceTK to do?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead?
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: TraceTK version
+      description: Which version or commit of TraceTK are you using?
+      placeholder: "e.g. 0.1.0 or commit abc1234"
+    validations:
+      required: true
+
+  - type: input
+    id: dotnet
+    attributes:
+      label: .NET version
+      description: Output of `dotnet --version`.
+      placeholder: "e.g. 10.0.100"
+    validations:
+      required: true
+
+  - type: input
+    id: opentk
+    attributes:
+      label: OpenTK version
+      description: Which version of OpenTK is the application using?
+      placeholder: "e.g. 4.9.4"
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - Linux
+        - macOS
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or diagnostic output
+      description: Include any relevant exceptions, logs, or TraceTK output.
+      render: shell
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add anything else that may help diagnose the problem.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for the same or a similar problem.
+          required: true
+        - label: I can reproduce this issue with the information provided above.
+          required: true
