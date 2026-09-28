@@ -16,13 +16,17 @@
   "build": {
     "content": [
       {
+        "src": "documentation",
         "files": [
-          "documentation/**/*.{md,yml}",
-          "api/**/*.yml"
-        ],
-        "exclude": [
-          "_site/**"
+          "**/*.{md,yml}"
         ]
+      },
+      {
+        "src": "api",
+        "files": [
+          "**/*.yml"
+        ],
+        "dest": "api"
       }
     ],
     "resource": [
