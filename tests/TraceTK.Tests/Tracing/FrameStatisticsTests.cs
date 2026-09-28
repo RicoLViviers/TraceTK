@@ -1,6 +1,6 @@
 using TraceTK.Diagnostics;
 
-namespace TraceTK.Tests;
+namespace TraceTK.Tests.Tracing;
 
 /// <summary>
 /// Contains tests for <see cref="FrameStatistics"/>.
