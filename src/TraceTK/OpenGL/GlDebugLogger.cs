@@ -1,4 +1,6 @@
 using OpenTK.Graphics.OpenGL4;
+using System;
+using System.IO;
 using System.Runtime.InteropServices;
 
 namespace TraceTK.OpenGL
