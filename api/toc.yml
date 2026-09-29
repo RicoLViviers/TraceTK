@@ -23,4 +23,7 @@ items:
   - uid: TraceTK.OpenGL.GlDebugMessage
     name: GlDebugMessage
     type: Class
+  - uid: TraceTK.OpenGL.GlDebugMessageType
+    name: GlDebugMessageType
+    type: Enum
 memberLayout: SamePage

@@ -18,11 +18,11 @@ items:
   type: Class
   source:
     remote:
-      path: src/TraceTK/Tracing/FrameStatistics.cs
+      path: src/TraceTK/Diagnostics/FrameStatistics.cs
       branch: feat/opengl-debug-logging
       repo: https://github.com/RicoLViviers/TraceTK.git
     id: FrameStatistics
-    path: src/TraceTK/Tracing/FrameStatistics.cs
+    path: src/TraceTK/Diagnostics/FrameStatistics.cs
     startLine: 8
   assemblies:
   - TraceTK
@@ -55,11 +55,11 @@ items:
   type: Field
   source:
     remote:
-      path: src/TraceTK/Tracing/FrameStatistics.cs
+      path: src/TraceTK/Diagnostics/FrameStatistics.cs
       branch: feat/opengl-debug-logging
       repo: https://github.com/RicoLViviers/TraceTK.git
     id: AverageFrameTime
-    path: src/TraceTK/Tracing/FrameStatistics.cs
+    path: src/TraceTK/Diagnostics/FrameStatistics.cs
     startLine: 16
   assemblies:
   - TraceTK
@@ -84,11 +84,11 @@ items:
   type: Field
   source:
     remote:
-      path: src/TraceTK/Tracing/FrameStatistics.cs
+      path: src/TraceTK/Diagnostics/FrameStatistics.cs
       branch: feat/opengl-debug-logging
       repo: https://github.com/RicoLViviers/TraceTK.git
     id: FramesPerSecond
-    path: src/TraceTK/Tracing/FrameStatistics.cs
+    path: src/TraceTK/Diagnostics/FrameStatistics.cs
     startLine: 21
   assemblies:
   - TraceTK
@@ -113,11 +113,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: src/TraceTK/Tracing/FrameStatistics.cs
+      path: src/TraceTK/Diagnostics/FrameStatistics.cs
       branch: feat/opengl-debug-logging
       repo: https://github.com/RicoLViviers/TraceTK.git
     id: .ctor
-    path: src/TraceTK/Tracing/FrameStatistics.cs
+    path: src/TraceTK/Diagnostics/FrameStatistics.cs
     startLine: 27
   assemblies:
   - TraceTK
@@ -148,11 +148,11 @@ items:
   type: Method
   source:
     remote:
-      path: src/TraceTK/Tracing/FrameStatistics.cs
+      path: src/TraceTK/Diagnostics/FrameStatistics.cs
       branch: feat/opengl-debug-logging
       repo: https://github.com/RicoLViviers/TraceTK.git
     id: AddFrame
-    path: src/TraceTK/Tracing/FrameStatistics.cs
+    path: src/TraceTK/Diagnostics/FrameStatistics.cs
     startLine: 41
   assemblies:
   - TraceTK

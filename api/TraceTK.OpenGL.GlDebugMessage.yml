@@ -5,7 +5,7 @@ items:
   id: GlDebugMessage
   parent: TraceTK.OpenGL
   children:
-  - TraceTK.OpenGL.GlDebugMessage.#ctor(OpenTK.Graphics.OpenGL4.DebugSource,OpenTK.Graphics.OpenGL4.DebugType,System.Int32,OpenTK.Graphics.OpenGL4.DebugSeverity,System.String)
+  - TraceTK.OpenGL.GlDebugMessage.#ctor(OpenTK.Graphics.OpenGL4.DebugSource,TraceTK.OpenGL.GlDebugMessageType,System.Int32,OpenTK.Graphics.OpenGL4.DebugSeverity,System.String)
   - TraceTK.OpenGL.GlDebugMessage.Id
   - TraceTK.OpenGL.GlDebugMessage.Message
   - TraceTK.OpenGL.GlDebugMessage.Severity
@@ -25,7 +25,7 @@ items:
       repo: https://github.com/RicoLViviers/TraceTK.git
     id: GlDebugMessage
     path: src/TraceTK/OpenGL/GlDebugMessage.cs
-    startLine: 8
+    startLine: 7
   assemblies:
   - TraceTK
   namespace: TraceTK.OpenGL
@@ -62,11 +62,11 @@ items:
       repo: https://github.com/RicoLViviers/TraceTK.git
     id: Source
     path: src/TraceTK/OpenGL/GlDebugMessage.cs
-    startLine: 13
+    startLine: 12
   assemblies:
   - TraceTK
   namespace: TraceTK.OpenGL
-  summary: The source that generated the debug message.
+  summary: The source that generated the message.
   example: []
   syntax:
     content: public DebugSource Source
@@ -91,17 +91,17 @@ items:
       repo: https://github.com/RicoLViviers/TraceTK.git
     id: Type
     path: src/TraceTK/OpenGL/GlDebugMessage.cs
-    startLine: 18
+    startLine: 17
   assemblies:
   - TraceTK
   namespace: TraceTK.OpenGL
-  summary: The type of the debug message.
+  summary: The type of the message.
   example: []
   syntax:
-    content: public DebugType Type
+    content: public GlDebugMessageType Type
     return:
-      type: OpenTK.Graphics.OpenGL4.DebugType
-    content.vb: Public Type As DebugType
+      type: TraceTK.OpenGL.GlDebugMessageType
+    content.vb: Public Type As GlDebugMessageType
 - uid: TraceTK.OpenGL.GlDebugMessage.Id
   commentId: F:TraceTK.OpenGL.GlDebugMessage.Id
   id: Id
@@ -120,11 +120,11 @@ items:
       repo: https://github.com/RicoLViviers/TraceTK.git
     id: Id
     path: src/TraceTK/OpenGL/GlDebugMessage.cs
-    startLine: 23
+    startLine: 22
   assemblies:
   - TraceTK
   namespace: TraceTK.OpenGL
-  summary: The OpenGL-assigned identifier of the debug message.
+  summary: The OpenGL-assigned identifier of the message.
   example: []
   syntax:
     content: public int Id
@@ -149,11 +149,11 @@ items:
       repo: https://github.com/RicoLViviers/TraceTK.git
     id: Severity
     path: src/TraceTK/OpenGL/GlDebugMessage.cs
-    startLine: 28
+    startLine: 27
   assemblies:
   - TraceTK
   namespace: TraceTK.OpenGL
-  summary: The severity of the debug message.
+  summary: The severity of the message.
   example: []
   syntax:
     content: public DebugSeverity Severity
@@ -178,27 +178,27 @@ items:
       repo: https://github.com/RicoLViviers/TraceTK.git
     id: Message
     path: src/TraceTK/OpenGL/GlDebugMessage.cs
-    startLine: 33
+    startLine: 32
   assemblies:
   - TraceTK
   namespace: TraceTK.OpenGL
-  summary: The human-readable debug message.
+  summary: The message reported by OpenGL.
   example: []
   syntax:
     content: public string Message
     return:
       type: System.String
     content.vb: Public Message As String
-- uid: TraceTK.OpenGL.GlDebugMessage.#ctor(OpenTK.Graphics.OpenGL4.DebugSource,OpenTK.Graphics.OpenGL4.DebugType,System.Int32,OpenTK.Graphics.OpenGL4.DebugSeverity,System.String)
-  commentId: M:TraceTK.OpenGL.GlDebugMessage.#ctor(OpenTK.Graphics.OpenGL4.DebugSource,OpenTK.Graphics.OpenGL4.DebugType,System.Int32,OpenTK.Graphics.OpenGL4.DebugSeverity,System.String)
-  id: '#ctor(OpenTK.Graphics.OpenGL4.DebugSource,OpenTK.Graphics.OpenGL4.DebugType,System.Int32,OpenTK.Graphics.OpenGL4.DebugSeverity,System.String)'
+- uid: TraceTK.OpenGL.GlDebugMessage.#ctor(OpenTK.Graphics.OpenGL4.DebugSource,TraceTK.OpenGL.GlDebugMessageType,System.Int32,OpenTK.Graphics.OpenGL4.DebugSeverity,System.String)
+  commentId: M:TraceTK.OpenGL.GlDebugMessage.#ctor(OpenTK.Graphics.OpenGL4.DebugSource,TraceTK.OpenGL.GlDebugMessageType,System.Int32,OpenTK.Graphics.OpenGL4.DebugSeverity,System.String)
+  id: '#ctor(OpenTK.Graphics.OpenGL4.DebugSource,TraceTK.OpenGL.GlDebugMessageType,System.Int32,OpenTK.Graphics.OpenGL4.DebugSeverity,System.String)'
   parent: TraceTK.OpenGL.GlDebugMessage
   langs:
   - csharp
   - vb
-  name: GlDebugMessage(DebugSource, DebugType, int, DebugSeverity, string)
-  nameWithType: GlDebugMessage.GlDebugMessage(DebugSource, DebugType, int, DebugSeverity, string)
-  fullName: TraceTK.OpenGL.GlDebugMessage.GlDebugMessage(OpenTK.Graphics.OpenGL4.DebugSource, OpenTK.Graphics.OpenGL4.DebugType, int, OpenTK.Graphics.OpenGL4.DebugSeverity, string)
+  name: GlDebugMessage(DebugSource, GlDebugMessageType, int, DebugSeverity, string)
+  nameWithType: GlDebugMessage.GlDebugMessage(DebugSource, GlDebugMessageType, int, DebugSeverity, string)
+  fullName: TraceTK.OpenGL.GlDebugMessage.GlDebugMessage(OpenTK.Graphics.OpenGL4.DebugSource, TraceTK.OpenGL.GlDebugMessageType, int, OpenTK.Graphics.OpenGL4.DebugSeverity, string)
   type: Constructor
   source:
     remote:
@@ -207,20 +207,20 @@ items:
       repo: https://github.com/RicoLViviers/TraceTK.git
     id: .ctor
     path: src/TraceTK/OpenGL/GlDebugMessage.cs
-    startLine: 43
+    startLine: 42
   assemblies:
   - TraceTK
   namespace: TraceTK.OpenGL
   summary: Creates an OpenGL debug message.
   example: []
   syntax:
-    content: public GlDebugMessage(DebugSource source, DebugType type, int id, DebugSeverity severity, string message)
+    content: public GlDebugMessage(DebugSource source, GlDebugMessageType type, int id, DebugSeverity severity, string message)
     parameters:
     - id: source
       type: OpenTK.Graphics.OpenGL4.DebugSource
       description: The source that generated the message.
     - id: type
-      type: OpenTK.Graphics.OpenGL4.DebugType
+      type: TraceTK.OpenGL.GlDebugMessageType
       description: The type of the message.
     - id: id
       type: System.Int32
@@ -230,12 +230,12 @@ items:
       description: The severity of the message.
     - id: message
       type: System.String
-      description: The human-readable debug message.
-    content.vb: Public Sub New(source As DebugSource, type As DebugType, id As Integer, severity As DebugSeverity, message As String)
+      description: The message reported by OpenGL.
+    content.vb: Public Sub New(source As DebugSource, type As GlDebugMessageType, id As Integer, severity As DebugSeverity, message As String)
   overload: TraceTK.OpenGL.GlDebugMessage.#ctor*
-  nameWithType.vb: GlDebugMessage.New(DebugSource, DebugType, Integer, DebugSeverity, String)
-  fullName.vb: TraceTK.OpenGL.GlDebugMessage.New(OpenTK.Graphics.OpenGL4.DebugSource, OpenTK.Graphics.OpenGL4.DebugType, Integer, OpenTK.Graphics.OpenGL4.DebugSeverity, String)
-  name.vb: New(DebugSource, DebugType, Integer, DebugSeverity, String)
+  nameWithType.vb: GlDebugMessage.New(DebugSource, GlDebugMessageType, Integer, DebugSeverity, String)
+  fullName.vb: TraceTK.OpenGL.GlDebugMessage.New(OpenTK.Graphics.OpenGL4.DebugSource, TraceTK.OpenGL.GlDebugMessageType, Integer, OpenTK.Graphics.OpenGL4.DebugSeverity, String)
+  name.vb: New(DebugSource, GlDebugMessageType, Integer, DebugSeverity, String)
 references:
 - uid: TraceTK.OpenGL
   commentId: N:TraceTK.OpenGL
@@ -528,13 +528,13 @@ references:
   - uid: OpenTK.Graphics.OpenGL4
     name: OpenGL4
     isExternal: true
-- uid: OpenTK.Graphics.OpenGL4.DebugType
-  commentId: T:OpenTK.Graphics.OpenGL4.DebugType
-  parent: OpenTK.Graphics.OpenGL4
-  isExternal: true
-  name: DebugType
-  nameWithType: DebugType
-  fullName: OpenTK.Graphics.OpenGL4.DebugType
+- uid: TraceTK.OpenGL.GlDebugMessageType
+  commentId: T:TraceTK.OpenGL.GlDebugMessageType
+  parent: TraceTK.OpenGL
+  href: TraceTK.OpenGL.GlDebugMessageType.html
+  name: GlDebugMessageType
+  nameWithType: GlDebugMessageType
+  fullName: TraceTK.OpenGL.GlDebugMessageType
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -566,7 +566,7 @@ references:
   name.vb: String
 - uid: TraceTK.OpenGL.GlDebugMessage.#ctor*
   commentId: Overload:TraceTK.OpenGL.GlDebugMessage.#ctor
-  href: TraceTK.OpenGL.GlDebugMessage.html#TraceTK_OpenGL_GlDebugMessage__ctor_OpenTK_Graphics_OpenGL4_DebugSource_OpenTK_Graphics_OpenGL4_DebugType_System_Int32_OpenTK_Graphics_OpenGL4_DebugSeverity_System_String_
+  href: TraceTK.OpenGL.GlDebugMessage.html#TraceTK_OpenGL_GlDebugMessage__ctor_OpenTK_Graphics_OpenGL4_DebugSource_TraceTK_OpenGL_GlDebugMessageType_System_Int32_OpenTK_Graphics_OpenGL4_DebugSeverity_System_String_
   name: GlDebugMessage
   nameWithType: GlDebugMessage.GlDebugMessage
   fullName: TraceTK.OpenGL.GlDebugMessage.GlDebugMessage

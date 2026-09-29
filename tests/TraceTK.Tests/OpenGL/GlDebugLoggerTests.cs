@@ -1,6 +1,5 @@
 using OpenTK.Graphics.OpenGL4;
 using TraceTK.OpenGL;
-using static TraceTK.OpenGL.GlDebugLogger;
 
 namespace TraceTK.Tests.OpenGL
 {
@@ -9,11 +8,7 @@ namespace TraceTK.Tests.OpenGL
         [Fact]
         public void LogWritesMessageToFile()
         {
-            string directory = Path.Combine(
-                Path.GetTempPath(),
-                "TraceTK.Tests",
-                Guid.NewGuid().ToString());
-
+            string directory = CreateTemporaryDirectory();
             string logPath = Path.Combine(directory, "tracetk.log");
 
             try
@@ -22,12 +17,12 @@ namespace TraceTK.Tests.OpenGL
 
                 GlDebugMessage message = new GlDebugMessage(
                     DebugSource.DebugSourceApi,
-                    MessageType.Error,
+                    GlDebugMessageType.Error,
                     42,
                     DebugSeverity.DebugSeverityHigh,
                     "Test OpenGL debug message");
 
-                logger.Log(message, message.Type);
+                logger.Log(message);
 
                 Assert.True(File.Exists(logPath));
 
@@ -35,27 +30,20 @@ namespace TraceTK.Tests.OpenGL
 
                 Assert.Contains("DebugSourceApi", contents);
                 Assert.Contains("DebugSeverityHigh", contents);
-                Assert.Contains("DebugTypeError", contents);
+                Assert.Contains("Error", contents);
                 Assert.Contains("42", contents);
                 Assert.Contains("Test OpenGL debug message", contents);
             }
             finally
             {
-                if (Directory.Exists(directory))
-                {
-                    Directory.Delete(directory, true);
-                }
+                DeleteDirectory(directory);
             }
         }
 
         [Fact]
         public void LogAppendsMultipleMessages()
         {
-            string directory = Path.Combine(
-                Path.GetTempPath(),
-                "TraceTK.Tests",
-                Guid.NewGuid().ToString());
-
+            string directory = CreateTemporaryDirectory();
             string logPath = Path.Combine(directory, "tracetk.log");
 
             try
@@ -64,20 +52,20 @@ namespace TraceTK.Tests.OpenGL
 
                 GlDebugMessage first = new GlDebugMessage(
                     DebugSource.DebugSourceApi,
-                    MessageType.Error,
+                    GlDebugMessageType.Error,
                     1,
                     DebugSeverity.DebugSeverityHigh,
                     "First message");
 
                 GlDebugMessage second = new GlDebugMessage(
                     DebugSource.DebugSourceApi,
-                    MessageType.Info,
+                    GlDebugMessageType.Info,
                     2,
                     DebugSeverity.DebugSeverityLow,
                     "Second message");
 
-                logger.Log(first, first.Type);
-                logger.Log(second, second.Type);
+                logger.Log(first);
+                logger.Log(second);
 
                 string contents = File.ReadAllText(logPath);
 
@@ -86,10 +74,23 @@ namespace TraceTK.Tests.OpenGL
             }
             finally
             {
-                if (Directory.Exists(directory))
-                {
-                    Directory.Delete(directory, true);
-                }
+                DeleteDirectory(directory);
+            }
+        }
+
+        private static string CreateTemporaryDirectory()
+        {
+            return Path.Combine(
+                Path.GetTempPath(),
+                "TraceTK.Tests",
+                Guid.NewGuid().ToString());
+        }
+
+        private static void DeleteDirectory(string directory)
+        {
+            if (Directory.Exists(directory))
+            {
+                Directory.Delete(directory, true);
             }
         }
     }

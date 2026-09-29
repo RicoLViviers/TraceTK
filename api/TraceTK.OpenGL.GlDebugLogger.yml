@@ -59,7 +59,7 @@ items:
       repo: https://github.com/RicoLViviers/TraceTK.git
     id: .ctor
     path: src/TraceTK/OpenGL/GlDebugLogger.cs
-    startLine: 18
+    startLine: 17
   assemblies:
   - TraceTK
   namespace: TraceTK.OpenGL
@@ -94,12 +94,11 @@ items:
       repo: https://github.com/RicoLViviers/TraceTK.git
     id: Start
     path: src/TraceTK/OpenGL/GlDebugLogger.cs
-    startLine: 38
+    startLine: 34
   assemblies:
   - TraceTK
   namespace: TraceTK.OpenGL
   summary: Enables OpenGL debug output and registers the debug message callback.
-  remarks: A valid OpenGL context must be current before this method is called.
   example: []
   syntax:
     content: public void Start()
@@ -123,18 +122,18 @@ items:
       repo: https://github.com/RicoLViviers/TraceTK.git
     id: Log
     path: src/TraceTK/OpenGL/GlDebugLogger.cs
-    startLine: 76
+    startLine: 73
   assemblies:
   - TraceTK
   namespace: TraceTK.OpenGL
-  summary: Writes an OpenGL debug message to the console and log file.
+  summary: ''
   example: []
   syntax:
     content: public void Log(GlDebugMessage message)
     parameters:
     - id: message
       type: TraceTK.OpenGL.GlDebugMessage
-      description: The debug message to write.
+      description: ''
     content.vb: Public Sub Log(message As GlDebugMessage)
   overload: TraceTK.OpenGL.GlDebugLogger.Log*
 references:

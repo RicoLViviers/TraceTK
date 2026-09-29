@@ -8,33 +8,6 @@ namespace TraceTK.OpenGL
     /// </summary>
     public class GlDebugLogger
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        public enum MessageType
-        {
-            /// <summary>
-            /// 
-            /// </summary>
-            Info,
-            /// <summary>
-            /// 
-            /// </summary>
-            Success,
-            /// <summary>
-            /// 
-            /// </summary>
-            Warning,
-            /// <summary>
-            /// 
-            /// </summary>
-            Error,
-            /// <summary>
-            /// 
-            /// </summary>
-            Debug
-        }
-
         private readonly string logPath;
         private readonly DebugProc debugCallback;
 
@@ -47,6 +20,7 @@ namespace TraceTK.OpenGL
             this.logPath = logPath;
 
             string? directory = Path.GetDirectoryName(logPath);
+
             if (!string.IsNullOrEmpty(directory))
             {
                 Directory.CreateDirectory(directory);
@@ -62,7 +36,6 @@ namespace TraceTK.OpenGL
         {
             GL.Enable(EnableCap.DebugOutput);
             GL.Enable(EnableCap.DebugOutputSynchronous);
-
             GL.DebugMessageCallback(debugCallback, IntPtr.Zero);
         }
 
@@ -82,62 +55,57 @@ namespace TraceTK.OpenGL
                 return;
             }
 
-            // FIX: Safely map OpenGL's DebugType to your custom MessageType enum
-            MessageType mappedType = MapGlToCustomType(type);
+            GlDebugMessageType messageType = GetMessageType(type);
 
             GlDebugMessage debugMessage = new GlDebugMessage(
                 source,
-                mappedType, // Pass the cleanly mapped type
+                messageType,
                 id,
                 severity,
                 messageText);
 
-            Log(debugMessage, debugMessage.Type);
+            Log(debugMessage);
         }
 
         /// <summary>
-        /// Writes an OpenGL debug message to the console and log file.
+        /// 
         /// </summary>
-        /// <param name="message">The debug message to write.</param>
-        /// <param name="type">Type of message</param>
-        public void Log(GlDebugMessage message, MessageType type)
+        /// <param name="message"></param>
+        public void Log(GlDebugMessage message)
         {
-            string output = $"[{message.Source}][{message.Severity}][{message.Type}][ID: {message.Id}] {message.Message}";
+            string output =
+                $"[{message.Source}][{message.Severity}][{message.Type}][ID: {message.Id}] {message.Message}";
 
-            // Color the console output
-            Console.ForegroundColor = GetConsoleColor(type);
+            Console.ForegroundColor = GetConsoleColor(message.Type);
             Console.WriteLine(output);
-            Console.ResetColor(); // Safely reset immediately after printing
+            Console.ResetColor();
 
-            // Write to the file without console color styling artifacts
             File.AppendAllText(logPath, output + Environment.NewLine);
         }
 
-        private ConsoleColor GetConsoleColor(MessageType type)
+        private static ConsoleColor GetConsoleColor(GlDebugMessageType type)
         {
             return type switch
             {
-                MessageType.Info => ConsoleColor.Cyan,
-                MessageType.Success => ConsoleColor.Green,
-                MessageType.Warning => ConsoleColor.Yellow,
-                MessageType.Error => ConsoleColor.Red,
-                MessageType.Debug => ConsoleColor.DarkGray,
+                GlDebugMessageType.Info => ConsoleColor.Cyan,
+                GlDebugMessageType.Warning => ConsoleColor.Yellow,
+                GlDebugMessageType.Error => ConsoleColor.Red,
+                GlDebugMessageType.Debug => ConsoleColor.DarkGray,
                 _ => ConsoleColor.White
             };
         }
 
-        // Helper method to safely translate OpenTK enums to your logger enums
-        private static MessageType MapGlToCustomType(DebugType glType)
+        private static GlDebugMessageType GetMessageType(DebugType type)
         {
-            return glType switch
+            return type switch
             {
-                DebugType.DebugTypeError => MessageType.Error,
-                DebugType.DebugTypeDeprecatedBehavior => MessageType.Warning,
-                DebugType.DebugTypeUndefinedBehavior => MessageType.Warning,
-                DebugType.DebugTypePerformance => MessageType.Warning,
-                DebugType.DebugTypePortability => MessageType.Info,
-                DebugType.DebugTypeOther => MessageType.Debug,
-                _ => MessageType.Info
+                DebugType.DebugTypeError => GlDebugMessageType.Error,
+                DebugType.DebugTypeDeprecatedBehavior => GlDebugMessageType.Warning,
+                DebugType.DebugTypeUndefinedBehavior => GlDebugMessageType.Warning,
+                DebugType.DebugTypePerformance => GlDebugMessageType.Warning,
+                DebugType.DebugTypePortability => GlDebugMessageType.Info,
+                DebugType.DebugTypeOther => GlDebugMessageType.Debug,
+                _ => GlDebugMessageType.Info
             };
         }
     }

@@ -1,18 +1,16 @@
 using OpenTK.Graphics.OpenGL4;
 using OpenTK.Mathematics;
-using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
-using TraceTK.OpenGL;
 
 namespace TraceTK.OpenGL.Sample
 {
     /// <summary>
-    /// TODO
+    /// Demonstrates OpenGL debug logging with TraceTK.
     /// </summary>
     public class Program
     {
         /// <summary>
-        /// TODO
+        /// Runs the TraceTK OpenGL sample.
         /// </summary>
         public static void Main()
         {
@@ -28,11 +26,9 @@ namespace TraceTK.OpenGL.Sample
                 gameWindowSettings,
                 nativeWindowSettings);
 
-            GlDebugLogger? logger = null;
-
             window.Load += () =>
             {
-                logger = new GlDebugLogger();
+                GlDebugLogger logger = new GlDebugLogger();
                 logger.Start();
 
                 GL.DebugMessageInsert(

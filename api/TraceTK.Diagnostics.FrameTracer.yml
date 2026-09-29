@@ -16,11 +16,11 @@ items:
   type: Class
   source:
     remote:
-      path: src/TraceTK/Tracing/FrameTracer.cs
+      path: src/TraceTK/Diagnostics/FrameTracer.cs
       branch: feat/opengl-debug-logging
       repo: https://github.com/RicoLViviers/TraceTK.git
     id: FrameTracer
-    path: src/TraceTK/Tracing/FrameTracer.cs
+    path: src/TraceTK/Diagnostics/FrameTracer.cs
     startLine: 7
   assemblies:
   - TraceTK
@@ -53,11 +53,11 @@ items:
   type: Method
   source:
     remote:
-      path: src/TraceTK/Tracing/FrameTracer.cs
+      path: src/TraceTK/Diagnostics/FrameTracer.cs
       branch: feat/opengl-debug-logging
       repo: https://github.com/RicoLViviers/TraceTK.git
     id: BeginFrame
-    path: src/TraceTK/Tracing/FrameTracer.cs
+    path: src/TraceTK/Diagnostics/FrameTracer.cs
     startLine: 15
   assemblies:
   - TraceTK
@@ -81,11 +81,11 @@ items:
   type: Method
   source:
     remote:
-      path: src/TraceTK/Tracing/FrameTracer.cs
+      path: src/TraceTK/Diagnostics/FrameTracer.cs
       branch: feat/opengl-debug-logging
       repo: https://github.com/RicoLViviers/TraceTK.git
     id: EndFrame
-    path: src/TraceTK/Tracing/FrameTracer.cs
+    path: src/TraceTK/Diagnostics/FrameTracer.cs
     startLine: 25
   assemblies:
   - TraceTK

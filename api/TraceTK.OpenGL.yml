@@ -6,6 +6,7 @@ items:
   children:
   - TraceTK.OpenGL.GlDebugLogger
   - TraceTK.OpenGL.GlDebugMessage
+  - TraceTK.OpenGL.GlDebugMessageType
   langs:
   - csharp
   - vb
@@ -29,6 +30,13 @@ references:
   name: GlDebugMessage
   nameWithType: GlDebugMessage
   fullName: TraceTK.OpenGL.GlDebugMessage
+- uid: TraceTK.OpenGL.GlDebugMessageType
+  commentId: T:TraceTK.OpenGL.GlDebugMessageType
+  parent: TraceTK.OpenGL
+  href: TraceTK.OpenGL.GlDebugMessageType.html
+  name: GlDebugMessageType
+  nameWithType: GlDebugMessageType
+  fullName: TraceTK.OpenGL.GlDebugMessageType
 - uid: TraceTK.OpenGL
   commentId: N:TraceTK.OpenGL
   name: TraceTK.OpenGL
