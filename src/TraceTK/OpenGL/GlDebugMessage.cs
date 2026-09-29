@@ -1,5 +1,6 @@
 using OpenTK.Graphics.OpenGL4;
 using System.Runtime.InteropServices;
+using static TraceTK.OpenGL.GlDebugLogger;
 
 namespace TraceTK.OpenGL
 {
@@ -16,7 +17,7 @@ namespace TraceTK.OpenGL
         /// <summary>
         /// The type of the debug message.
         /// </summary>
-        public DebugType Type;
+        public MessageType Type;
 
         /// <summary>
         /// The OpenGL-assigned identifier of the debug message.
@@ -43,7 +44,7 @@ namespace TraceTK.OpenGL
         /// <param name="message">The human-readable debug message.</param>
         public GlDebugMessage(
             DebugSource source,
-            DebugType type,
+            MessageType type,
             int id,
             DebugSeverity severity,
             string message)

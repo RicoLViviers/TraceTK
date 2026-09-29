@@ -1,5 +1,6 @@
 using OpenTK.Graphics.OpenGL4;
 using TraceTK.OpenGL;
+using static TraceTK.OpenGL.GlDebugLogger;
 
 namespace TraceTK.Tests.OpenGL
 {
@@ -16,13 +17,13 @@ namespace TraceTK.Tests.OpenGL
 
             GlDebugMessage debugMessage = new GlDebugMessage(
                 source,
-                type,
+                (MessageType)type,
                 id,
                 severity,
                 message);
 
             Assert.Equal(source, debugMessage.Source);
-            Assert.Equal(type, debugMessage.Type);
+            Assert.Equal((MessageType)type, debugMessage.Type);
             Assert.Equal(id, debugMessage.Id);
             Assert.Equal(severity, debugMessage.Severity);
             Assert.Equal(message, debugMessage.Message);

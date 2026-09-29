@@ -1,16 +1,11 @@
 using OpenTK.Graphics.OpenGL4;
 using TraceTK.OpenGL;
+using static TraceTK.OpenGL.GlDebugLogger;
 
 namespace TraceTK.Tests.OpenGL
 {
-    /// <summary>
-    /// TODO
-    /// </summary>
     public class GlDebugLoggerTests
     {
-        /// <summary>
-        /// TODO
-        /// </summary>
         [Fact]
         public void LogWritesMessageToFile()
         {
@@ -27,12 +22,12 @@ namespace TraceTK.Tests.OpenGL
 
                 GlDebugMessage message = new GlDebugMessage(
                     DebugSource.DebugSourceApi,
-                    DebugType.DebugTypeError,
+                    MessageType.Error,
                     42,
                     DebugSeverity.DebugSeverityHigh,
                     "Test OpenGL debug message");
 
-                logger.Log(message);
+                logger.Log(message, message.Type);
 
                 Assert.True(File.Exists(logPath));
 
@@ -53,10 +48,6 @@ namespace TraceTK.Tests.OpenGL
             }
         }
 
-        /// <summary>
-        /// TODO
-        /// </summary>
-
         [Fact]
         public void LogAppendsMultipleMessages()
         {
@@ -73,20 +64,20 @@ namespace TraceTK.Tests.OpenGL
 
                 GlDebugMessage first = new GlDebugMessage(
                     DebugSource.DebugSourceApi,
-                    DebugType.DebugTypeError,
+                    MessageType.Error,
                     1,
                     DebugSeverity.DebugSeverityHigh,
                     "First message");
 
                 GlDebugMessage second = new GlDebugMessage(
                     DebugSource.DebugSourceApi,
-                    DebugType.DebugTypePerformance,
+                    MessageType.Info,
                     2,
                     DebugSeverity.DebugSeverityLow,
                     "Second message");
 
-                logger.Log(first);
-                logger.Log(second);
+                logger.Log(first, first.Type);
+                logger.Log(second, second.Type);
 
                 string contents = File.ReadAllText(logPath);
 
