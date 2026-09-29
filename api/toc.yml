@@ -13,4 +13,17 @@ items:
   - uid: TraceTK.Diagnostics.FrameTracer
     name: FrameTracer
     type: Class
+- uid: TraceTK.OpenGL
+  name: TraceTK.OpenGL
+  type: Namespace
+  items:
+  - uid: TraceTK.OpenGL.GlDebugLogger
+    name: GlDebugLogger
+    type: Class
+  - uid: TraceTK.OpenGL.GlDebugMessage
+    name: GlDebugMessage
+    type: Class
+  - uid: TraceTK.OpenGL.GlDebugMessageType
+    name: GlDebugMessageType
+    type: Enum
 memberLayout: SamePage

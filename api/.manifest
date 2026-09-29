@@ -10,5 +10,22 @@
   "TraceTK.Diagnostics.FrameTrace.FrameNumber": "TraceTK.Diagnostics.FrameTrace.yml",
   "TraceTK.Diagnostics.FrameTracer": "TraceTK.Diagnostics.FrameTracer.yml",
   "TraceTK.Diagnostics.FrameTracer.BeginFrame": "TraceTK.Diagnostics.FrameTracer.yml",
-  "TraceTK.Diagnostics.FrameTracer.EndFrame": "TraceTK.Diagnostics.FrameTracer.yml"
+  "TraceTK.Diagnostics.FrameTracer.EndFrame": "TraceTK.Diagnostics.FrameTracer.yml",
+  "TraceTK.OpenGL": "TraceTK.OpenGL.yml",
+  "TraceTK.OpenGL.GlDebugLogger": "TraceTK.OpenGL.GlDebugLogger.yml",
+  "TraceTK.OpenGL.GlDebugLogger.#ctor(System.String)": "TraceTK.OpenGL.GlDebugLogger.yml",
+  "TraceTK.OpenGL.GlDebugLogger.Log(TraceTK.OpenGL.GlDebugMessage)": "TraceTK.OpenGL.GlDebugLogger.yml",
+  "TraceTK.OpenGL.GlDebugLogger.Start": "TraceTK.OpenGL.GlDebugLogger.yml",
+  "TraceTK.OpenGL.GlDebugMessage": "TraceTK.OpenGL.GlDebugMessage.yml",
+  "TraceTK.OpenGL.GlDebugMessage.#ctor(OpenTK.Graphics.OpenGL4.DebugSource,TraceTK.OpenGL.GlDebugMessageType,System.Int32,OpenTK.Graphics.OpenGL4.DebugSeverity,System.String)": "TraceTK.OpenGL.GlDebugMessage.yml",
+  "TraceTK.OpenGL.GlDebugMessage.Id": "TraceTK.OpenGL.GlDebugMessage.yml",
+  "TraceTK.OpenGL.GlDebugMessage.Message": "TraceTK.OpenGL.GlDebugMessage.yml",
+  "TraceTK.OpenGL.GlDebugMessage.Severity": "TraceTK.OpenGL.GlDebugMessage.yml",
+  "TraceTK.OpenGL.GlDebugMessage.Source": "TraceTK.OpenGL.GlDebugMessage.yml",
+  "TraceTK.OpenGL.GlDebugMessage.Type": "TraceTK.OpenGL.GlDebugMessage.yml",
+  "TraceTK.OpenGL.GlDebugMessageType": "TraceTK.OpenGL.GlDebugMessageType.yml",
+  "TraceTK.OpenGL.GlDebugMessageType.Debug": "TraceTK.OpenGL.GlDebugMessageType.yml",
+  "TraceTK.OpenGL.GlDebugMessageType.Error": "TraceTK.OpenGL.GlDebugMessageType.yml",
+  "TraceTK.OpenGL.GlDebugMessageType.Info": "TraceTK.OpenGL.GlDebugMessageType.yml",
+  "TraceTK.OpenGL.GlDebugMessageType.Warning": "TraceTK.OpenGL.GlDebugMessageType.yml"
 }

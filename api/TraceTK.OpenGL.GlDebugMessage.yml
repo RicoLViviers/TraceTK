@@ -1,37 +1,39 @@
 ### YamlMime:ManagedReference
 items:
-- uid: TraceTK.Diagnostics.FrameStatistics
-  commentId: T:TraceTK.Diagnostics.FrameStatistics
-  id: FrameStatistics
-  parent: TraceTK.Diagnostics
+- uid: TraceTK.OpenGL.GlDebugMessage
+  commentId: T:TraceTK.OpenGL.GlDebugMessage
+  id: GlDebugMessage
+  parent: TraceTK.OpenGL
   children:
-  - TraceTK.Diagnostics.FrameStatistics.#ctor(System.Int32)
-  - TraceTK.Diagnostics.FrameStatistics.AddFrame(TraceTK.Diagnostics.FrameTrace)
-  - TraceTK.Diagnostics.FrameStatistics.AverageFrameTime
-  - TraceTK.Diagnostics.FrameStatistics.FramesPerSecond
+  - TraceTK.OpenGL.GlDebugMessage.#ctor(OpenTK.Graphics.OpenGL4.DebugSource,TraceTK.OpenGL.GlDebugMessageType,System.Int32,OpenTK.Graphics.OpenGL4.DebugSeverity,System.String)
+  - TraceTK.OpenGL.GlDebugMessage.Id
+  - TraceTK.OpenGL.GlDebugMessage.Message
+  - TraceTK.OpenGL.GlDebugMessage.Severity
+  - TraceTK.OpenGL.GlDebugMessage.Source
+  - TraceTK.OpenGL.GlDebugMessage.Type
   langs:
   - csharp
   - vb
-  name: FrameStatistics
-  nameWithType: FrameStatistics
-  fullName: TraceTK.Diagnostics.FrameStatistics
+  name: GlDebugMessage
+  nameWithType: GlDebugMessage
+  fullName: TraceTK.OpenGL.GlDebugMessage
   type: Class
   source:
     remote:
-      path: src/TraceTK/Diagnostics/FrameStatistics.cs
+      path: src/TraceTK/OpenGL/GlDebugMessage.cs
       branch: feat/opengl-debug-logging
       repo: https://github.com/RicoLViviers/TraceTK.git
-    id: FrameStatistics
-    path: src/TraceTK/Diagnostics/FrameStatistics.cs
-    startLine: 8
+    id: GlDebugMessage
+    path: src/TraceTK/OpenGL/GlDebugMessage.cs
+    startLine: 7
   assemblies:
   - TraceTK
-  namespace: TraceTK.Diagnostics
-  summary: Calculates performance statistics from recently recorded frames.
+  namespace: TraceTK.OpenGL
+  summary: Represents a debug message reported by OpenGL.
   example: []
   syntax:
-    content: public class FrameStatistics
-    content.vb: Public Class FrameStatistics
+    content: public class GlDebugMessage
+    content.vb: Public Class GlDebugMessage
   inheritance:
   - System.Object
   inheritedMembers:
@@ -42,149 +44,216 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: TraceTK.Diagnostics.FrameStatistics.AverageFrameTime
-  commentId: F:TraceTK.Diagnostics.FrameStatistics.AverageFrameTime
-  id: AverageFrameTime
-  parent: TraceTK.Diagnostics.FrameStatistics
+- uid: TraceTK.OpenGL.GlDebugMessage.Source
+  commentId: F:TraceTK.OpenGL.GlDebugMessage.Source
+  id: Source
+  parent: TraceTK.OpenGL.GlDebugMessage
   langs:
   - csharp
   - vb
-  name: AverageFrameTime
-  nameWithType: FrameStatistics.AverageFrameTime
-  fullName: TraceTK.Diagnostics.FrameStatistics.AverageFrameTime
+  name: Source
+  nameWithType: GlDebugMessage.Source
+  fullName: TraceTK.OpenGL.GlDebugMessage.Source
   type: Field
   source:
     remote:
-      path: src/TraceTK/Diagnostics/FrameStatistics.cs
+      path: src/TraceTK/OpenGL/GlDebugMessage.cs
       branch: feat/opengl-debug-logging
       repo: https://github.com/RicoLViviers/TraceTK.git
-    id: AverageFrameTime
-    path: src/TraceTK/Diagnostics/FrameStatistics.cs
-    startLine: 16
+    id: Source
+    path: src/TraceTK/OpenGL/GlDebugMessage.cs
+    startLine: 12
   assemblies:
   - TraceTK
-  namespace: TraceTK.Diagnostics
-  summary: The average CPU frame time across the current sampling window.
+  namespace: TraceTK.OpenGL
+  summary: The source that generated the message.
   example: []
   syntax:
-    content: public TimeSpan AverageFrameTime
+    content: public DebugSource Source
     return:
-      type: System.TimeSpan
-    content.vb: Public AverageFrameTime As TimeSpan
-- uid: TraceTK.Diagnostics.FrameStatistics.FramesPerSecond
-  commentId: F:TraceTK.Diagnostics.FrameStatistics.FramesPerSecond
-  id: FramesPerSecond
-  parent: TraceTK.Diagnostics.FrameStatistics
+      type: OpenTK.Graphics.OpenGL4.DebugSource
+    content.vb: Public Source As DebugSource
+- uid: TraceTK.OpenGL.GlDebugMessage.Type
+  commentId: F:TraceTK.OpenGL.GlDebugMessage.Type
+  id: Type
+  parent: TraceTK.OpenGL.GlDebugMessage
   langs:
   - csharp
   - vb
-  name: FramesPerSecond
-  nameWithType: FrameStatistics.FramesPerSecond
-  fullName: TraceTK.Diagnostics.FrameStatistics.FramesPerSecond
+  name: Type
+  nameWithType: GlDebugMessage.Type
+  fullName: TraceTK.OpenGL.GlDebugMessage.Type
   type: Field
   source:
     remote:
-      path: src/TraceTK/Diagnostics/FrameStatistics.cs
+      path: src/TraceTK/OpenGL/GlDebugMessage.cs
       branch: feat/opengl-debug-logging
       repo: https://github.com/RicoLViviers/TraceTK.git
-    id: FramesPerSecond
-    path: src/TraceTK/Diagnostics/FrameStatistics.cs
-    startLine: 21
+    id: Type
+    path: src/TraceTK/OpenGL/GlDebugMessage.cs
+    startLine: 17
   assemblies:
   - TraceTK
-  namespace: TraceTK.Diagnostics
-  summary: The average number of frames processed per second.
+  namespace: TraceTK.OpenGL
+  summary: The type of the message.
   example: []
   syntax:
-    content: public double FramesPerSecond
+    content: public GlDebugMessageType Type
     return:
-      type: System.Double
-    content.vb: Public FramesPerSecond As Double
-- uid: TraceTK.Diagnostics.FrameStatistics.#ctor(System.Int32)
-  commentId: M:TraceTK.Diagnostics.FrameStatistics.#ctor(System.Int32)
-  id: '#ctor(System.Int32)'
-  parent: TraceTK.Diagnostics.FrameStatistics
+      type: TraceTK.OpenGL.GlDebugMessageType
+    content.vb: Public Type As GlDebugMessageType
+- uid: TraceTK.OpenGL.GlDebugMessage.Id
+  commentId: F:TraceTK.OpenGL.GlDebugMessage.Id
+  id: Id
+  parent: TraceTK.OpenGL.GlDebugMessage
   langs:
   - csharp
   - vb
-  name: FrameStatistics(int)
-  nameWithType: FrameStatistics.FrameStatistics(int)
-  fullName: TraceTK.Diagnostics.FrameStatistics.FrameStatistics(int)
-  type: Constructor
+  name: Id
+  nameWithType: GlDebugMessage.Id
+  fullName: TraceTK.OpenGL.GlDebugMessage.Id
+  type: Field
   source:
     remote:
-      path: src/TraceTK/Diagnostics/FrameStatistics.cs
+      path: src/TraceTK/OpenGL/GlDebugMessage.cs
       branch: feat/opengl-debug-logging
       repo: https://github.com/RicoLViviers/TraceTK.git
-    id: .ctor
-    path: src/TraceTK/Diagnostics/FrameStatistics.cs
+    id: Id
+    path: src/TraceTK/OpenGL/GlDebugMessage.cs
+    startLine: 22
+  assemblies:
+  - TraceTK
+  namespace: TraceTK.OpenGL
+  summary: The OpenGL-assigned identifier of the message.
+  example: []
+  syntax:
+    content: public int Id
+    return:
+      type: System.Int32
+    content.vb: Public Id As Integer
+- uid: TraceTK.OpenGL.GlDebugMessage.Severity
+  commentId: F:TraceTK.OpenGL.GlDebugMessage.Severity
+  id: Severity
+  parent: TraceTK.OpenGL.GlDebugMessage
+  langs:
+  - csharp
+  - vb
+  name: Severity
+  nameWithType: GlDebugMessage.Severity
+  fullName: TraceTK.OpenGL.GlDebugMessage.Severity
+  type: Field
+  source:
+    remote:
+      path: src/TraceTK/OpenGL/GlDebugMessage.cs
+      branch: feat/opengl-debug-logging
+      repo: https://github.com/RicoLViviers/TraceTK.git
+    id: Severity
+    path: src/TraceTK/OpenGL/GlDebugMessage.cs
     startLine: 27
   assemblies:
   - TraceTK
-  namespace: TraceTK.Diagnostics
-  summary: Creates a new frame statistics collector.
+  namespace: TraceTK.OpenGL
+  summary: The severity of the message.
   example: []
   syntax:
-    content: public FrameStatistics(int windowSize = 60)
-    parameters:
-    - id: windowSize
-      type: System.Int32
-      description: The maximum number of recent frames used to calculate statistics.
-    content.vb: Public Sub New(windowSize As Integer = 60)
-  overload: TraceTK.Diagnostics.FrameStatistics.#ctor*
-  nameWithType.vb: FrameStatistics.New(Integer)
-  fullName.vb: TraceTK.Diagnostics.FrameStatistics.New(Integer)
-  name.vb: New(Integer)
-- uid: TraceTK.Diagnostics.FrameStatistics.AddFrame(TraceTK.Diagnostics.FrameTrace)
-  commentId: M:TraceTK.Diagnostics.FrameStatistics.AddFrame(TraceTK.Diagnostics.FrameTrace)
-  id: AddFrame(TraceTK.Diagnostics.FrameTrace)
-  parent: TraceTK.Diagnostics.FrameStatistics
+    content: public DebugSeverity Severity
+    return:
+      type: OpenTK.Graphics.OpenGL4.DebugSeverity
+    content.vb: Public Severity As DebugSeverity
+- uid: TraceTK.OpenGL.GlDebugMessage.Message
+  commentId: F:TraceTK.OpenGL.GlDebugMessage.Message
+  id: Message
+  parent: TraceTK.OpenGL.GlDebugMessage
   langs:
   - csharp
   - vb
-  name: AddFrame(FrameTrace)
-  nameWithType: FrameStatistics.AddFrame(FrameTrace)
-  fullName: TraceTK.Diagnostics.FrameStatistics.AddFrame(TraceTK.Diagnostics.FrameTrace)
-  type: Method
+  name: Message
+  nameWithType: GlDebugMessage.Message
+  fullName: TraceTK.OpenGL.GlDebugMessage.Message
+  type: Field
   source:
     remote:
-      path: src/TraceTK/Diagnostics/FrameStatistics.cs
+      path: src/TraceTK/OpenGL/GlDebugMessage.cs
       branch: feat/opengl-debug-logging
       repo: https://github.com/RicoLViviers/TraceTK.git
-    id: AddFrame
-    path: src/TraceTK/Diagnostics/FrameStatistics.cs
-    startLine: 41
+    id: Message
+    path: src/TraceTK/OpenGL/GlDebugMessage.cs
+    startLine: 32
   assemblies:
   - TraceTK
-  namespace: TraceTK.Diagnostics
-  summary: Adds a completed frame and updates the current statistics.
+  namespace: TraceTK.OpenGL
+  summary: The message reported by OpenGL.
   example: []
   syntax:
-    content: public void AddFrame(FrameTrace frame)
+    content: public string Message
+    return:
+      type: System.String
+    content.vb: Public Message As String
+- uid: TraceTK.OpenGL.GlDebugMessage.#ctor(OpenTK.Graphics.OpenGL4.DebugSource,TraceTK.OpenGL.GlDebugMessageType,System.Int32,OpenTK.Graphics.OpenGL4.DebugSeverity,System.String)
+  commentId: M:TraceTK.OpenGL.GlDebugMessage.#ctor(OpenTK.Graphics.OpenGL4.DebugSource,TraceTK.OpenGL.GlDebugMessageType,System.Int32,OpenTK.Graphics.OpenGL4.DebugSeverity,System.String)
+  id: '#ctor(OpenTK.Graphics.OpenGL4.DebugSource,TraceTK.OpenGL.GlDebugMessageType,System.Int32,OpenTK.Graphics.OpenGL4.DebugSeverity,System.String)'
+  parent: TraceTK.OpenGL.GlDebugMessage
+  langs:
+  - csharp
+  - vb
+  name: GlDebugMessage(DebugSource, GlDebugMessageType, int, DebugSeverity, string)
+  nameWithType: GlDebugMessage.GlDebugMessage(DebugSource, GlDebugMessageType, int, DebugSeverity, string)
+  fullName: TraceTK.OpenGL.GlDebugMessage.GlDebugMessage(OpenTK.Graphics.OpenGL4.DebugSource, TraceTK.OpenGL.GlDebugMessageType, int, OpenTK.Graphics.OpenGL4.DebugSeverity, string)
+  type: Constructor
+  source:
+    remote:
+      path: src/TraceTK/OpenGL/GlDebugMessage.cs
+      branch: feat/opengl-debug-logging
+      repo: https://github.com/RicoLViviers/TraceTK.git
+    id: .ctor
+    path: src/TraceTK/OpenGL/GlDebugMessage.cs
+    startLine: 42
+  assemblies:
+  - TraceTK
+  namespace: TraceTK.OpenGL
+  summary: Creates an OpenGL debug message.
+  example: []
+  syntax:
+    content: public GlDebugMessage(DebugSource source, GlDebugMessageType type, int id, DebugSeverity severity, string message)
     parameters:
-    - id: frame
-      type: TraceTK.Diagnostics.FrameTrace
-      description: The completed frame to include in the statistics.
-    content.vb: Public Sub AddFrame(frame As FrameTrace)
-  overload: TraceTK.Diagnostics.FrameStatistics.AddFrame*
+    - id: source
+      type: OpenTK.Graphics.OpenGL4.DebugSource
+      description: The source that generated the message.
+    - id: type
+      type: TraceTK.OpenGL.GlDebugMessageType
+      description: The type of the message.
+    - id: id
+      type: System.Int32
+      description: The OpenGL-assigned message identifier.
+    - id: severity
+      type: OpenTK.Graphics.OpenGL4.DebugSeverity
+      description: The severity of the message.
+    - id: message
+      type: System.String
+      description: The message reported by OpenGL.
+    content.vb: Public Sub New(source As DebugSource, type As GlDebugMessageType, id As Integer, severity As DebugSeverity, message As String)
+  overload: TraceTK.OpenGL.GlDebugMessage.#ctor*
+  nameWithType.vb: GlDebugMessage.New(DebugSource, GlDebugMessageType, Integer, DebugSeverity, String)
+  fullName.vb: TraceTK.OpenGL.GlDebugMessage.New(OpenTK.Graphics.OpenGL4.DebugSource, TraceTK.OpenGL.GlDebugMessageType, Integer, OpenTK.Graphics.OpenGL4.DebugSeverity, String)
+  name.vb: New(DebugSource, GlDebugMessageType, Integer, DebugSeverity, String)
 references:
-- uid: TraceTK.Diagnostics
-  commentId: N:TraceTK.Diagnostics
-  name: TraceTK.Diagnostics
-  nameWithType: TraceTK.Diagnostics
-  fullName: TraceTK.Diagnostics
+- uid: TraceTK.OpenGL
+  commentId: N:TraceTK.OpenGL
+  name: TraceTK.OpenGL
+  nameWithType: TraceTK.OpenGL
+  fullName: TraceTK.OpenGL
   spec.csharp:
   - uid: TraceTK
     name: TraceTK
   - name: .
-  - uid: TraceTK.Diagnostics
-    name: Diagnostics
+  - uid: TraceTK.OpenGL
+    name: OpenGL
   spec.vb:
   - uid: TraceTK
     name: TraceTK
   - name: .
-  - uid: TraceTK.Diagnostics
-    name: Diagnostics
+  - uid: TraceTK.OpenGL
+    name: OpenGL
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -422,34 +491,50 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: System.TimeSpan
-  commentId: T:System.TimeSpan
-  parent: System
+- uid: OpenTK.Graphics.OpenGL4.DebugSource
+  commentId: T:OpenTK.Graphics.OpenGL4.DebugSource
+  parent: OpenTK.Graphics.OpenGL4
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.timespan
-  name: TimeSpan
-  nameWithType: TimeSpan
-  fullName: System.TimeSpan
-- uid: System.Double
-  commentId: T:System.Double
-  parent: System
+  name: DebugSource
+  nameWithType: DebugSource
+  fullName: OpenTK.Graphics.OpenGL4.DebugSource
+- uid: OpenTK.Graphics.OpenGL4
+  commentId: N:OpenTK.Graphics.OpenGL4
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.double
-  name: double
-  nameWithType: double
-  fullName: double
-  nameWithType.vb: Double
-  fullName.vb: Double
-  name.vb: Double
-- uid: TraceTK.Diagnostics.FrameStatistics.#ctor*
-  commentId: Overload:TraceTK.Diagnostics.FrameStatistics.#ctor
-  href: TraceTK.Diagnostics.FrameStatistics.html#TraceTK_Diagnostics_FrameStatistics__ctor_System_Int32_
-  name: FrameStatistics
-  nameWithType: FrameStatistics.FrameStatistics
-  fullName: TraceTK.Diagnostics.FrameStatistics.FrameStatistics
-  nameWithType.vb: FrameStatistics.New
-  fullName.vb: TraceTK.Diagnostics.FrameStatistics.New
-  name.vb: New
+  name: OpenTK.Graphics.OpenGL4
+  nameWithType: OpenTK.Graphics.OpenGL4
+  fullName: OpenTK.Graphics.OpenGL4
+  spec.csharp:
+  - uid: OpenTK
+    name: OpenTK
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Graphics
+    name: Graphics
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Graphics.OpenGL4
+    name: OpenGL4
+    isExternal: true
+  spec.vb:
+  - uid: OpenTK
+    name: OpenTK
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Graphics
+    name: Graphics
+    isExternal: true
+  - name: .
+  - uid: OpenTK.Graphics.OpenGL4
+    name: OpenGL4
+    isExternal: true
+- uid: TraceTK.OpenGL.GlDebugMessageType
+  commentId: T:TraceTK.OpenGL.GlDebugMessageType
+  parent: TraceTK.OpenGL
+  href: TraceTK.OpenGL.GlDebugMessageType.html
+  name: GlDebugMessageType
+  nameWithType: GlDebugMessageType
+  fullName: TraceTK.OpenGL.GlDebugMessageType
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -461,16 +546,30 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
-- uid: TraceTK.Diagnostics.FrameStatistics.AddFrame*
-  commentId: Overload:TraceTK.Diagnostics.FrameStatistics.AddFrame
-  href: TraceTK.Diagnostics.FrameStatistics.html#TraceTK_Diagnostics_FrameStatistics_AddFrame_TraceTK_Diagnostics_FrameTrace_
-  name: AddFrame
-  nameWithType: FrameStatistics.AddFrame
-  fullName: TraceTK.Diagnostics.FrameStatistics.AddFrame
-- uid: TraceTK.Diagnostics.FrameTrace
-  commentId: T:TraceTK.Diagnostics.FrameTrace
-  parent: TraceTK.Diagnostics
-  href: TraceTK.Diagnostics.FrameTrace.html
-  name: FrameTrace
-  nameWithType: FrameTrace
-  fullName: TraceTK.Diagnostics.FrameTrace
+- uid: OpenTK.Graphics.OpenGL4.DebugSeverity
+  commentId: T:OpenTK.Graphics.OpenGL4.DebugSeverity
+  parent: OpenTK.Graphics.OpenGL4
+  isExternal: true
+  name: DebugSeverity
+  nameWithType: DebugSeverity
+  fullName: OpenTK.Graphics.OpenGL4.DebugSeverity
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TraceTK.OpenGL.GlDebugMessage.#ctor*
+  commentId: Overload:TraceTK.OpenGL.GlDebugMessage.#ctor
+  href: TraceTK.OpenGL.GlDebugMessage.html#TraceTK_OpenGL_GlDebugMessage__ctor_OpenTK_Graphics_OpenGL4_DebugSource_TraceTK_OpenGL_GlDebugMessageType_System_Int32_OpenTK_Graphics_OpenGL4_DebugSeverity_System_String_
+  name: GlDebugMessage
+  nameWithType: GlDebugMessage.GlDebugMessage
+  fullName: TraceTK.OpenGL.GlDebugMessage.GlDebugMessage
+  nameWithType.vb: GlDebugMessage.New
+  fullName.vb: TraceTK.OpenGL.GlDebugMessage.New
+  name.vb: New

@@ -425,3 +425,6 @@ FodyWeavers.xsd
 
 # Documentation related files
 _site/
+
+# Tests
+logs/

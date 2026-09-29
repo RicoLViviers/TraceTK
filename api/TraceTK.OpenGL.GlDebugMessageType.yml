@@ -1,0 +1,171 @@
+### YamlMime:ManagedReference
+items:
+- uid: TraceTK.OpenGL.GlDebugMessageType
+  commentId: T:TraceTK.OpenGL.GlDebugMessageType
+  id: GlDebugMessageType
+  parent: TraceTK.OpenGL
+  children:
+  - TraceTK.OpenGL.GlDebugMessageType.Debug
+  - TraceTK.OpenGL.GlDebugMessageType.Error
+  - TraceTK.OpenGL.GlDebugMessageType.Info
+  - TraceTK.OpenGL.GlDebugMessageType.Warning
+  langs:
+  - csharp
+  - vb
+  name: GlDebugMessageType
+  nameWithType: GlDebugMessageType
+  fullName: TraceTK.OpenGL.GlDebugMessageType
+  type: Enum
+  source:
+    remote:
+      path: src/TraceTK/OpenGL/GlDebugMessageType.cs
+      branch: feat/opengl-debug-logging
+      repo: https://github.com/RicoLViviers/TraceTK.git
+    id: GlDebugMessageType
+    path: src/TraceTK/OpenGL/GlDebugMessageType.cs
+    startLine: 5
+  assemblies:
+  - TraceTK
+  namespace: TraceTK.OpenGL
+  summary: Represents the type of an OpenGL debug message.
+  example: []
+  syntax:
+    content: public enum GlDebugMessageType
+    content.vb: Public Enum GlDebugMessageType
+- uid: TraceTK.OpenGL.GlDebugMessageType.Info
+  commentId: F:TraceTK.OpenGL.GlDebugMessageType.Info
+  id: Info
+  parent: TraceTK.OpenGL.GlDebugMessageType
+  langs:
+  - csharp
+  - vb
+  name: Info
+  nameWithType: GlDebugMessageType.Info
+  fullName: TraceTK.OpenGL.GlDebugMessageType.Info
+  type: Field
+  source:
+    remote:
+      path: src/TraceTK/OpenGL/GlDebugMessageType.cs
+      branch: feat/opengl-debug-logging
+      repo: https://github.com/RicoLViviers/TraceTK.git
+    id: Info
+    path: src/TraceTK/OpenGL/GlDebugMessageType.cs
+    startLine: 10
+  assemblies:
+  - TraceTK
+  namespace: TraceTK.OpenGL
+  summary: Indicates an informational debug message.
+  example: []
+  syntax:
+    content: Info = 0
+    return:
+      type: TraceTK.OpenGL.GlDebugMessageType
+- uid: TraceTK.OpenGL.GlDebugMessageType.Warning
+  commentId: F:TraceTK.OpenGL.GlDebugMessageType.Warning
+  id: Warning
+  parent: TraceTK.OpenGL.GlDebugMessageType
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: GlDebugMessageType.Warning
+  fullName: TraceTK.OpenGL.GlDebugMessageType.Warning
+  type: Field
+  source:
+    remote:
+      path: src/TraceTK/OpenGL/GlDebugMessageType.cs
+      branch: feat/opengl-debug-logging
+      repo: https://github.com/RicoLViviers/TraceTK.git
+    id: Warning
+    path: src/TraceTK/OpenGL/GlDebugMessageType.cs
+    startLine: 15
+  assemblies:
+  - TraceTK
+  namespace: TraceTK.OpenGL
+  summary: Indicates a warning about potentially problematic behavior.
+  example: []
+  syntax:
+    content: Warning = 1
+    return:
+      type: TraceTK.OpenGL.GlDebugMessageType
+- uid: TraceTK.OpenGL.GlDebugMessageType.Error
+  commentId: F:TraceTK.OpenGL.GlDebugMessageType.Error
+  id: Error
+  parent: TraceTK.OpenGL.GlDebugMessageType
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: GlDebugMessageType.Error
+  fullName: TraceTK.OpenGL.GlDebugMessageType.Error
+  type: Field
+  source:
+    remote:
+      path: src/TraceTK/OpenGL/GlDebugMessageType.cs
+      branch: feat/opengl-debug-logging
+      repo: https://github.com/RicoLViviers/TraceTK.git
+    id: Error
+    path: src/TraceTK/OpenGL/GlDebugMessageType.cs
+    startLine: 20
+  assemblies:
+  - TraceTK
+  namespace: TraceTK.OpenGL
+  summary: Indicates an OpenGL error.
+  example: []
+  syntax:
+    content: Error = 2
+    return:
+      type: TraceTK.OpenGL.GlDebugMessageType
+- uid: TraceTK.OpenGL.GlDebugMessageType.Debug
+  commentId: F:TraceTK.OpenGL.GlDebugMessageType.Debug
+  id: Debug
+  parent: TraceTK.OpenGL.GlDebugMessageType
+  langs:
+  - csharp
+  - vb
+  name: Debug
+  nameWithType: GlDebugMessageType.Debug
+  fullName: TraceTK.OpenGL.GlDebugMessageType.Debug
+  type: Field
+  source:
+    remote:
+      path: src/TraceTK/OpenGL/GlDebugMessageType.cs
+      branch: feat/opengl-debug-logging
+      repo: https://github.com/RicoLViviers/TraceTK.git
+    id: Debug
+    path: src/TraceTK/OpenGL/GlDebugMessageType.cs
+    startLine: 25
+  assemblies:
+  - TraceTK
+  namespace: TraceTK.OpenGL
+  summary: Indicates a general diagnostic debug message.
+  example: []
+  syntax:
+    content: Debug = 3
+    return:
+      type: TraceTK.OpenGL.GlDebugMessageType
+references:
+- uid: TraceTK.OpenGL
+  commentId: N:TraceTK.OpenGL
+  name: TraceTK.OpenGL
+  nameWithType: TraceTK.OpenGL
+  fullName: TraceTK.OpenGL
+  spec.csharp:
+  - uid: TraceTK
+    name: TraceTK
+  - name: .
+  - uid: TraceTK.OpenGL
+    name: OpenGL
+  spec.vb:
+  - uid: TraceTK
+    name: TraceTK
+  - name: .
+  - uid: TraceTK.OpenGL
+    name: OpenGL
+- uid: TraceTK.OpenGL.GlDebugMessageType
+  commentId: T:TraceTK.OpenGL.GlDebugMessageType
+  parent: TraceTK.OpenGL
+  href: TraceTK.OpenGL.GlDebugMessageType.html
+  name: GlDebugMessageType
+  nameWithType: GlDebugMessageType
+  fullName: TraceTK.OpenGL.GlDebugMessageType

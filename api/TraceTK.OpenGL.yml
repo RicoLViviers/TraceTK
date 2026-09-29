@@ -1,0 +1,56 @@
+### YamlMime:ManagedReference
+items:
+- uid: TraceTK.OpenGL
+  commentId: N:TraceTK.OpenGL
+  id: TraceTK.OpenGL
+  children:
+  - TraceTK.OpenGL.GlDebugLogger
+  - TraceTK.OpenGL.GlDebugMessage
+  - TraceTK.OpenGL.GlDebugMessageType
+  langs:
+  - csharp
+  - vb
+  name: TraceTK.OpenGL
+  nameWithType: TraceTK.OpenGL
+  fullName: TraceTK.OpenGL
+  type: Namespace
+  assemblies:
+  - TraceTK
+references:
+- uid: TraceTK.OpenGL.GlDebugLogger
+  commentId: T:TraceTK.OpenGL.GlDebugLogger
+  href: TraceTK.OpenGL.GlDebugLogger.html
+  name: GlDebugLogger
+  nameWithType: GlDebugLogger
+  fullName: TraceTK.OpenGL.GlDebugLogger
+- uid: TraceTK.OpenGL.GlDebugMessage
+  commentId: T:TraceTK.OpenGL.GlDebugMessage
+  parent: TraceTK.OpenGL
+  href: TraceTK.OpenGL.GlDebugMessage.html
+  name: GlDebugMessage
+  nameWithType: GlDebugMessage
+  fullName: TraceTK.OpenGL.GlDebugMessage
+- uid: TraceTK.OpenGL.GlDebugMessageType
+  commentId: T:TraceTK.OpenGL.GlDebugMessageType
+  parent: TraceTK.OpenGL
+  href: TraceTK.OpenGL.GlDebugMessageType.html
+  name: GlDebugMessageType
+  nameWithType: GlDebugMessageType
+  fullName: TraceTK.OpenGL.GlDebugMessageType
+- uid: TraceTK.OpenGL
+  commentId: N:TraceTK.OpenGL
+  name: TraceTK.OpenGL
+  nameWithType: TraceTK.OpenGL
+  fullName: TraceTK.OpenGL
+  spec.csharp:
+  - uid: TraceTK
+    name: TraceTK
+  - name: .
+  - uid: TraceTK.OpenGL
+    name: OpenGL
+  spec.vb:
+  - uid: TraceTK
+    name: TraceTK
+  - name: .
+  - uid: TraceTK.OpenGL
+    name: OpenGL
